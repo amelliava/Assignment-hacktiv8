@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+
+  <body style="background-color: rgb(228, 225, 225);" >
+
+    <!--Class Navbar-->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fw-semibold">
+            <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">PRODUCT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">INVENTORY</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+
+    <!--Class Header-->
+
+    <header>
+      <div class="container">
+        <div class="dlm-con">
+          <div class="sidebr">
+            <img alt="" class="img" src="../Assignment2/img/user1.png">
+            <div class="nama">
+              <h2 id="text-nama">Nama Anda</h2>
+              <p id="text-role">Front-End Developer</p>
+
+              <div class="button">
+                <button id="button-edit" class="btn-kontak">Edit</button>
+                <button class="btn-resume" href="#">Resume</button>
+              </div>
+            </div>
+          </div>
+
+          <!--side bar-->
+
+          <div id="sidebar-2">
+            <div class="sdb-kiri">
+              <p>Availbility</p>
+              <p>Usia</p>
+              <p>Lokasi</p>
+              <p>Pengalaman</p>
+              <p>Email</p>
+            </div>
+          </div>
+
+          <!--side bar-->
+
+          <div id="sidebar-3">
+            <div class="sdb-kiri-1">
+              <p id="text-avl"></p>
+              <p id="text-usia"></p>
+              <p id="text-lokasi"></p>
+              <p id="text-pengalaman"></p>
+              <p id="text-email"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <br />
+    
+    <!--Table Form-->
+
+    <div class="container">
+      <form id="form-nama" onsubmit="handleSubmit(event)">
+        <div class="mb-3">
+          <label for="nama">Nama</label>
+          <input type="text" name="nama" class="form-control" id="input-nama">
+        </div>
+        <div class="mb-3">
+          <label for="role">Role</label>
+          <input name="role" class="form-control" id="input-role" />
+        </div>
+        <div class="mb-3">
+          <label for="avl">Availbility</label>
+          <input name="avl" class="form-control" id="input-avl" />
+        </div>
+        <div class="mb-3">
+          <label for="age">Age</label>
+          <input name="age" class="form-control" id="input-age" />
+        </div>
+        <div class="mb-3">
+          <label for="lokasi">Lokasi</label>
+          <input name="lokasi" class="form-control" id="input-lokasi" />
+        </div>
+        <div class="mb-3">
+          <label for="pengalaman">Pengalaman</label>
+          <input name="pengalaman" class="form-control" id="input-pengalaman" />
+        </div>
+        <div class="mb-3">
+          <label for="email">Email</label>
+          <input name="email" class="form-control" id="input-email" />
+        </div>
+        <div class="d-grid gap-2">
+          <button
+            class="btn btn-success"
+            id="btn-sbmt"
+            type="submit"
+            onclick="contoh()"
+          >
+            Sumbit
+          </button>
+        </div>
+        <br />
+      </form>
+
+      <!--Script-->
+
+      <script>
+        var textNama = document.getElementById("text-nama");
+        var textRole = document.getElementById("text-role");
+        var TextAvl = document.getElementById("text-avl");
+        var textUsia = document.getElementById("text-usia");
+        var textLokasi = document.getElementById("text-lokasi");
+        var textPengalaman = document.getElementById("text-pengalaman");
+        var textEmail = document.getElementById("text-email");
+        document.getElementById("input-nama").value = textNama.innerText;
+        document.getElementById("input-role").value = textRole.innerText;
+        document.getElementById("input-avl").value = TextAvl.innerText;
+        document.getElementById("input-age").value = textUsia.innerText;
+        document.getElementById("input-lokasi").value = textLokasi.innerText;
+        document.getElementById("input-pengalaman").value =
+          textPengalaman.innerText;
+        document.getElementById("input-email").value = textEmail.innerText;
+
+        function handleSubmit(event) {
+          var inputNama = document.getElementById("input-nama");
+          var inputRole = document.getElementById("input-role");
+          var inputAvl = document.getElementById("input-avl");
+          var inputAge = document.getElementById("input-age");
+          var inputLokasi = document.getElementById("input-lokasi");
+          var inputPengalaman = document.getElementById("input-pengalaman");
+          var inputEmail = document.getElementById("input-email");
+          document.getElementById("text-nama").innerText = inputNama.value;
+          document.getElementById("text-role").innerText = inputRole.value;
+          document.getElementById("text-avl").innerText = inputAvl.value;
+          document.getElementById("text-usia").innerText = inputAge.value;
+          document.getElementById("text-lokasi").innerText = inputLokasi.value;
+          document.getElementById("text-pengalaman").innerText =
+            inputPengalaman.value;
+          document.getElementById("text-email").innerText = inputEmail.value;
+
+          const text1 = document.getElementById("form-nama");
+          const display = text1.style.display;
+          if (display == "block") {
+            console.log(display, "display dalam if");
+            text1.style.display = "none";
+          } else {
+            console.log(display, "display dalam else");
+            text1.style.display = "block";
+          }
+          event.preventDefault();
+        }
+
+        const buttonEdit = document.getElementById("button-edit");
+        buttonEdit.addEventListener("click", function () {
+          const text1 = document.getElementById("form-nama");
+          const display = text1.style.display;
+          if (display == "block") {
+            console.log(display, "displayy dalam if");
+            text1.style.display = "none";
+          } else {
+            console.log(display, "display dalam else");
+            text1.style.display = "block";
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

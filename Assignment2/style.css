@@ -1,0 +1,97 @@
+.container {
+    background-color: white;
+    padding: 215x;
+    border-radius: 0px;
+}
+
+.dlm-con {
+    display: flex;
+    padding: 30px;
+    background-color: white;
+}
+
+#sidebar {
+    display: flex;
+    width: 360px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    margin-left: 700px;
+}
+
+img {
+    display: inline;
+    width: 110px;
+    border-radius: 50%;
+}
+
+#sidebar-2 {
+    margin-left: 300px;
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 19px;
+}
+
+.nama {
+    margin-top: -123px;
+    margin-left: 180px;
+}
+
+.text1 {
+    margin-top: 12px;
+    
+}
+
+.text2 {
+    display: block;
+    margin-top: 15px;
+    margin-left: 20px;
+    line-height: 19px;
+}
+
+.btn-kontak {
+    font-family: sans-serif;
+    font-size: 1em;
+    background: blue;
+    color: #ffffff;
+    border: #ffffff 0.1rem solid;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.6rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+    background-color: blue;
+}
+
+.btn-kontak:hover {
+    background-color: brown;
+}
+
+.btn-resume {
+    font-family: sans-serif;
+    font-size: 1em;
+    background: white;
+    color: green;
+    border: rgb(0, 0, 0) 0.1rem solid;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.6rem;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.btn-resume:hover {
+    background-color: grey;
+}
+
+#text-1 {
+    display: none;
+    color: blue;
+}
+
+
+#form-nama {
+    display: none;
+}
+
+.nav-item:hover{
+    background-color: grey;
+}
